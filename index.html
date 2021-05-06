@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from motaadmin.dexignlab.com/xhtml/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Jan 2021 02:50:11 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MotaAdmin - Bootstrap Admin Dashboard </title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <link href="vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="vendor/chartist/css/chartist.min.css">
+    <link href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link href="../../cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+	<!-- date picker -->
+	<link href="vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
+	<link href="vendor/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet" />
+
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
+
+	<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css" />
+
+
+	
+	<!-- <script src=""></script> -->
+
+	<style>
+		.dataTables_wrapper .dataTables_paginate .paginate_button {
+		  background: none;
+		  color: white!important;
+		  border-radius: 4px;
+		  border: 1px solid #828282;
+		}
+		.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+		  background: none;
+		  color: white!important;
+		  border-radius: 4px;
+		  border: 1px solid #828282;
+		}
+		 
+		.dataTables_wrapper .dataTables_paginate .paginate_button:active {
+		  background: none;
+		  color: white!important;
+		}
+		.dataTables_filter label {
+			color: white;
+		}
+	</style>
+
+</head>
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <a href="index.html" class="brand-logo">
+                <img class="logo-abbr" src="images/logo-white.png" alt="">
+                <img class="logo-compact" src="images/logo-text.png" alt="">
+                <img class="brand-title" src="images/logo-text.png" alt="">
+            </a>
+
+            <div class="nav-control">
+                <div class="hamburger">
+                    <span class="line"></span><span class="line"></span><span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+		
+        <!--**********************************
+            Header start
+        ***********************************-->
+        <div class="header">
+            <div class="header-content">
+                <nav class="navbar navbar-expand">
+                    <div class="collapse navbar-collapse justify-content-between">
+                        <div class="header-left">
+                            <div class="search_bar dropdown">
+                                <!-- <span class="search_icon p-3 c-pointer" data-toggle="dropdown">
+                                    <i class="mdi mdi-magnify"></i>
+                                </span> -->
+                                <!-- <div class="dropdown-menu p-0 m-0">
+                                    <form>
+                                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                                    </form>
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <ul class="navbar-nav header-right"></ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <div class="deznav">
+            <div class="deznav-scroll">
+				<ul class="nav menu-tabs">
+					<li class="nav-item">
+						<a class="nav-link active" data-toggle="tab" href="#dashboard-area">
+							<svg id="icon-home" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- <a href="page-login.html" class="logout-btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg></a> -->
+        </div>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+		
+		<!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+            <!-- row -->
+			<div class="container-fluid">
+                <div class="row">
+					<div class="col-xl-9 col-xxl-12">
+						<div class="row">
+							<div class="col-xl-3 col-xxl-3 col-lg-3 col-sm-3">
+								<div class="card overflow-hidden">
+									<div class="card-body pb-0 px-4 pt-4">
+										<div class="row">
+											<div class="col">
+												<h5
+														class="mb-1"
+														url="/get_table/select count(a.id) as total_collection, sum(a.amount) as collection from account_payment a  where a.bill_description = 'bill' and a.payment_date between '[start_date]' and '[end_date]';"
+														element-type="single-element"
+														element-render="html"
+														element-data="collection"
+														element-config='{"collection": ["toFix_2","cast_float", "comma_number"]}'
+														use-replace="false"
+														
+												>
+													Loading...
+												</h5>
+												<span class="text-success">Amount Collected (This Month)</span>
+											</div>
+										</div>
+									</div>
+									<div class="chart-wrapper">
+										<canvas id="areaChart_2" class="chartjs-render-monitor" height="90"></canvas>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-xl-3 col-xxl-3 col-lg-3 col-sm-3">
+								<div class="card bg-success	overflow-hidden"
+								>
+									<div class="card-body pb-0 px-1 pt-1">
+										<div class="row">
+											<div class="col">
+												<h5
+														class="text-white mb-1"
+														url="/get_table/select count(id) as total_cust, sum(((e_consumed  * tariff_rate) + (e_consumed * tariff_rate * case when create_date > '2020-01-31' then 0.075 else 0.05 end))) as total_amount from feeder_customer_details where create_date between '[start_date]' and '[end_date]';"
+														element-type="single-element"
+														element-render="html"
+														element-data="total_amount"
+														element-config='{"total_amount": ["toFix_2","cast_float", "comma_number"]}'
+														use-replace="true"
+												>
+													Loading...
+												</h5>
+
+
+												
+												<span class="text-white">Total Billed Units</span>
+											</div>
+										</div>
+									</div>
+									<div class="chart-wrapper" style="width:100%">
+										<span id="chart" class="peity-line" data-width="100%">6,2,8,4,3,8,4,3,6,5,9,2</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3 col-xxl-3 col-lg-6 col-sm-6">
+								<div class="card bg-primary overflow-hidden">
+									<div class="card-body pb-0 px-4 pt-4">
+										<div class="row">
+											<div class="col text-white">
+												<h5
+														class="text-white mb-1"
+														element-type="single-element"
+														element-render="html"
+														element-data="total_customers"
+														url="/get_table/select count(id) as total_customers from res_partner where create_date between '[start_date]' and '[end_date]';"
+														element-config='{"total_customers": ["toFix_2","cast_float", "comma_number"]}'
+														use-replace="true"
+												>
+													Loading...
+												</h5>
+												<span>New Captures</span>
+											</div>
+										</div>
+									</div>
+									<div class="chart-wrapper px-2">
+										<canvas id="chart_widget_2" height="100"></canvas>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3 col-xxl-3 col-lg-3 col-sm-3">
+								<div class="card bg-success	overflow-hidden"
+								>
+									<div class="card-body pb-0 px-1 pt-1">
+										<div class="row">
+											<div class="col">
+												<h5
+														class="mb-1"
+														url="/get_table/select count(id) as total_customers from res_partner where metering_type='prepaid' and active = true;"
+														element-type="single-element"
+														element-render="html"
+														element-data="total_customers"
+														element-config='{"total_customers": ["toFix_2","cast_float", "comma_number"]}'
+														use-replace="true"
+												>
+													Loading...
+												</h5>
+												<span class="text-white">Total Prepaid</span>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col">
+												<h5
+														class="mb-1"
+														url="/get_table/select count(id) as total_customers from res_partner where metering_type='postpaid' and active = true and bill_status = true;"
+														element-type="single-element"
+														element-render="html"
+														element-data="total_customers"
+														element-config='{"total_customers": ["toFix_2","cast_float", "comma_number"]}'
+														use-replace="false"
+												>
+													Loading...
+												</h5>
+												<span class="text-white">Total Active Postpaid</span>
+
+
+												<h5
+														class="mb-1"
+														url="/get_table/select count(id) as total_customers from res_partner where metering_type='postpaid' and active = true and bill_status = false;"
+														element-type="single-element"
+														element-render="html"
+														element-data="total_customers"
+														element-config='{"total_customers": ["toFix_2","cast_float", "comma_number"]}'
+														use-replace="true"
+												>
+													Loading...
+												</h5>
+												<span class="text-white">Total Suspended Postpaid</span>
+												<h5
+														class="text-white mb-1"
+														element-type="single-element"
+														element-render="html"
+														element-data="total_customers"
+														url="/get_table/select count(id) as total_customers from res_partner;"
+														element-config='{"total_customers": ["toFix_2","cast_float", "comma_number"]}'
+														use-replace="true"
+
+												>Loading...</h5>
+												<span class="text-white">Total Customers</span>
+											</div>
+										</div>
+									</div>
+									<div class="chart-wrapper" style="width:100%">
+										<span id="chart1" class="peity-line" data-width="100%">4,3,8,6,5,9,2,6,2,4,3,8</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-12 col-xxl-12 col-lg-12 col-md-12">
+								<div class="card activity_overview">
+									<div class="card-header  border-0 pb-3 ">
+										<h4 class="card-title text-white">Payments (Bill)</h4>
+										<div class="col-xl-4 mb-3">
+											<div class="example">
+												<p class="mb-1">Date Range Pick</p>
+												<input class="form-control input-daterange-datepicker" 
+												type="text" 
+												name="daterange" 
+												value="01/01/2021 - 01/31/2021"
+												element-type="chart-btn-date-range"
+												element-name="pie-payment-chart-date"
+												ids="[]"
+												/>
+											</div>
+										</div>
+									</div>
+									<div class="card-body pt-0">
+										<div class="custom-tab-1">
+											<ul class="nav nav-tabs mb-2">
+												<!-- <li class="nav-item">
+													<a class="nav-link " data-toggle="tab" href="#sale">Category (Amount)</a>
+												</li> -->
+												<!-- <li class="nav-item">
+													<a class="nav-link " data-toggle="tab" href="#overview">Category (Customers)</a>
+												</li> -->
+												<li class="nav-item">
+													<a class="nav-link active" data-toggle="tab" href="#district">District</a>
+												</li>
+												<!-- <li class="nav-item">
+													<a class="nav-link" data-toggle="tab" href="#service-cluster">Service Cluster</a>
+												</li> -->
+
+												<!-- <li class="nav-item">
+													<a class="nav-link" data-toggle="tab" href="#bill-type">Bill Type</a>
+												</li> -->
+
+											</ul>
+											<div class="tab-content">
+												<!--Bill Type-->
+												<!-- <div class="tab-pane fade" id="sale">
+													<div class="card-body px-4 py-4">
+														<h5 class="mb-3"><small class="text-primary">Total Collection by Categories</small></h5>
+														<div class="chart-point">
+															<div class="check-point-area">
+																<canvas 
+																	element-type="chart-bar"
+																	data-label='name'
+																	primary-key="collection"
+																	chart-title='Payments'
+																	primary-title="Collection"
+																	url="/get_table/select count(a.id) as total_customer_that_made_payment, sum(a.amount) as collection, r.name from account_payment a left join res_partner d on d.id = a.partner_id left join tariff_rate r on r.id = d.new_category where a.bill_description = 'bill' and a.payment_date >= '[current_year]'  group by r.name;"
+																	date-url="/get_table/select count(a.id) as total_customer_that_made_payment, sum(a.amount) as collection, r.name from account_payment a left join res_partner d on d.id = a.partner_id left join tariff_rate r on r.id = d.new_category where a.bill_description = 'bill' and a.payment_date between '[start_date]' and '[end_date]'  group by r.name;"
+																	crumb-id="category-chart-crumb-1"
+																	element-group-name="pie-payment-chart-date"
+																></canvas>
+															</div>
+															<ul class="chart-point-list" id="category-chart-crumb-1"></ul>
+														</div>
+													</div>
+												</div> -->
+												<!-- <div class="tab-pane fade " id="overview" role="tabpanel">
+													<div class="card-body px-4 py-4">
+														<h5 class="mb-3"><small class="text-primary">Total Collection By Customers</small></h5>
+														<div class="chart-point">
+															<div class="check-point-area">
+																<canvas 
+																	element-type="chart-bar"
+																	data-label='customer_category'
+																	primary-key="total_collection"
+																	chart-title='Payments'
+																	primary-title="Collection"
+																	url="/get_table/select count(a.id) as total_collection, sum(a.amount) as collection, d.customer_category from account_payment a left join res_partner d on d.id = a.partner_id where a.bill_description = 'bill' and a.payment_date >= '[current_year]' group by d.customer_category;"
+																	date-url="/get_table/select count(a.id) as total_collection, sum(a.amount) as collection, d.customer_category from account_payment a left join res_partner d on d.id = a.partner_id where a.bill_description = 'bill' and a.payment_date between '[start_date]' and '[end_date]' group by d.customer_category"
+																	crumb-id="category-chart-crumb-23"
+																	element-group-name="pie-payment-chart-date"
+																></canvas>
+															</div>
+															<ul class="chart-point-list" id="category-chart-crumb-23"></ul>
+														</div>
+													</div>
+												</div> -->
+												<div class="tab-pane fade active show" id="district">
+													<div class="card-body  px-4 py-4">
+														<h5 class="mb-3"><small class="text-primary">Total Collection By District</small></h5>
+														<div class="chart-point">
+															<div class="check-point-area  col-md-10" style="height: 300px;">
+																<canvas 
+																	element-type="chart-bar"
+																	data-label='name'
+																	primary-key="collection"
+																	secondary-key="total_collection"
+																	chart-title='Payments'
+																	primary-title="Collection"
+																	secondary-title="Total Customers"
+																	url="/get_table/select count(a.id) as total_collection, sum(a.amount) as collection, d.name from account_payment a left join res_district d on d.id = a.x_district where a.bill_description = 'bill' and a.payment_date >= '[current_year]'  group by d.name;"
+																	date-url="/get_table/select count(a.id) as total_collection, sum(a.amount) as collection, d.name from account_payment a left join res_district d on d.id = a.x_district where a.bill_description = 'bill' and a.payment_date between '[start_date]' and '[end_date]' group by d.name;"
+																	element-group-name="pie-payment-chart-date"
+																	element-config='{"collection": ["toFix_2","cast_float", "comma_number"],"total_collection": ["toFix_2","cast_float", "comma_number"]}'
+																></canvas>
+															</div>
+														</div>
+													</div>
+													
+												</div>
+												<!-- <div class="tab-pane fade" id="service-cluster">
+													<div class="card-body px-4 py-4">
+														<h5 class="mb-3"><small class="text-primary">Total Collection By Service Clusters</small></h5>
+														<div class="chart-point">
+															<div class="check-point-area">
+																<canvas 
+																	element-type="chart-pie"
+																	data-label='name'
+																	primary-key="collection"
+																	chart-title='Payments'
+																	primary-title="Collection"
+																	url="/get_table/select count(a.id) as total_collection, sum(a.amount) as collection, sc.name  from account_payment a left join feeder_feeder f on f.district_id = a.x_district    left join service_cluster sc on sc.id = f.f_band   where a.bill_description = 'bill' and a.payment_date >= '[current_year]'  group by sc.name;"
+																	date-url="/get_table/select count(a.id) as total_collection, sum(a.amount) as collection, sc.name  from account_payment a left join feeder_feeder f on f.district_id = a.x_district    left join service_cluster sc on sc.id = f.f_band   where a.bill_description = 'bill' and a.payment_date between '[start_date]' and '[end_date]' group by sc.name;"
+																	crumb-id="sc-chart-crumb-cluster"
+																	element-group-name="pie-payment-chart-date"
+																></canvas>
+															</div>
+															<ul class="chart-point-list" id="sc-chart-crumb-cluster"></ul>
+														</div>
+													</div>
+												</div> -->
+												<!-- <div class="tab-pane fade" id="bill-type">
+													<div class="card-body px-4 py-4">
+														<h5 class="mb-3"><small class="text-primary">Total Collection By Bill Type</small></h5>
+														<div class="chart-point">
+															<div class="check-point-area  col-md-10">
+																<canvas
+																		element-type="chart-pie"
+																		data-label='bill_description'
+																		primary-key="amount"
+																		chart-title='Payments'
+																		primary-title="Amount"
+																		url="/get_table/select count(a.id) as records, sum(a.amount) as amount, a.bill_description from account_payment a  where a.payment_date >= '[current_year]'   group by a.bill_description;"
+																		date-url="/get_table/select count(a.id) as records, sum(a.amount) as amount, a.bill_description from account_payment a where a.payment_date between '[start_date]' and '[end_date]'  group by a.bill_description;
+"
+																		crumb-id="bill-type-chart-crumb-cluster"
+																		element-group-name="pie-payment-chart-date"
+																></canvas>
+															</div>
+															<ul class="chart-point-list" id="bill-type-chart-crumb-cluster"></ul>
+														</div>
+													</div>
+												</div>
+ -->
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-12 col-xxl-12 col-lg-12 col-md-12">
+								<div class="card activity_overview">
+									<div class="card-header  border-0 pb-3 ">
+										<h4 class="card-title text-white">Total Billed Units</h4>
+										<div class="col-xl-4 mb-3">
+											<div class="example">
+												<p class="mb-1">Date Range Pick</p>
+												<input class="form-control" 
+												type="text" 
+												name="daterange" 
+												value="01/01/2021 - 01/31/2021"
+												element-type="chart-btn-date-range"
+												element-name="pie-billed-chart-date"
+												ids="[]"
+												/>
+											</div>
+										</div>
+									</div>
+									<div class="card-body pt-0">
+										<div class="custom-tab-1">
+											<ul class="nav nav-tabs mb-2">
+												<!-- <li class="nav-item">
+													<a class="nav-link " data-toggle="tab" href="#bill-by-category">Category</a>
+												</li> -->
+												<li class="nav-item">
+													<a class="nav-link active" data-toggle="tab" href="#bill-district">District</a>
+												</li>
+												<!-- <li class="nav-item">
+													<a class="nav-link active" data-toggle="tab" href="#billing-service-cluster">Service Cluster</a>
+												</li> -->
+												<li class="nav-item">
+													<a class="nav-link" data-toggle="tab" href="#bill-tarrif">Tariffs</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" data-toggle="tab" href="#bill-bill-type">Feeder</a>
+												</li>
+												<!-- <li class="nav-item">
+													<a class="nav-link" data-toggle="tab" href="#bill-bill-type">Transformer</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" data-toggle="tab" href="#bill-bill-type">Customer Class</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" data-toggle="tab" href="#bill-bill-type">Book</a>
+												</li> -->
+
+											</ul>
+											<div class="tab-content">
+												<!-- <div class="tab-pane fade " id="bill-by-category" role="tabpanel">
+													<div class="card-body px-4 py-4">
+														<h5 class="mb-3"><small class="text-primary">Total Billed Amount By Customer Category</small></h5>
+														<div class="chart-point">
+															<div class="check-point-area">
+																<canvas
+																	element-type="chart-bar"
+																	data-label='name'
+																	primary-key="billed_amount"
+																	chart-title='Payments'
+																	primary-title="Collection"
+																	url="/get_table/select count(fcd.id) as records, sum(((fcd.e_consumed  * fcd.tariff_rate) + (fcd.e_consumed * fcd.tariff_rate * case when fcd.create_date > '2020-01-31' then 0.075 else 0.05 end))) as billed_amount, r.name from feeder_customer_details fcd left join res_partner d on d.id = fcd.customer_ids left join tariff_rate r on r.id = d.new_category where fcd.create_date >= '[current_year]' group by r.name;"
+																	date-url="/get_table/select count(fcd.id) as records, sum(((fcd.e_consumed  * fcd.tariff_rate) + (fcd.e_consumed * fcd.tariff_rate * case when fcd.create_date > '2020-01-31' then 0.075 else 0.05 end))) as billed_amount, r.name from feeder_customer_details fcd left join res_partner d on d.id = fcd.customer_ids left join tariff_rate r on r.id = d.new_category where create_date between '[start_date]' and '[end_date]' group by r.name;"
+																	crumb-id="bill-category-chart-crumb-category"
+																	element-group-name="pie-billed-chart-date"
+																></canvas>
+															</div>
+															<ul class="chart-point-list" id="bill-category-chart-crumb-category"></ul>
+														</div>
+													</div>
+												</div> -->
+												<div class="tab-pane fade active show" id="bill-district">
+													<div class="card-body  px-4 py-4">
+														<h5 class="mb-3"><small class="text-primary">Total Billed Units By District</small></h5>
+														<div class="chart-point">
+															<div class="check-point-area  col-md-12" style="height: 300px;">
+																<canvas
+																	element-type="chart-bar"
+																	data-label='district_name'
+																	primary-key="billed_amount"
+																	secondary-key="records"
+																	chart-title='Payments'
+																	primary-title="Amount"
+																	secondary-title="Total Records"
+																	url="/get_table/select count(fcd.id) as records, sum(fcd.b_amount) as billed_amount, rd.name as district_name from feeder_customer_details fcd left join feeder_feeder f on f.id = fcd.feeder_id left join res_district rd on rd.id=f.district_id  where fcd.create_date >= '[current_year]' group by district_name;"
+																	date-url="/get_table/select count(fcd.id) as records, sum(fcd.b_amount) as billed_amount, rd.name as district_name from feeder_customer_details fcd left join feeder_feeder f on f.id = fcd.feeder_id left join res_district rd on rd.id=f.district_id where fcd.create_date between '[start_date]' and '[end_date]' group by district_name;"
+																	element-group-name="pie-billed-chart-date"
+																	element-config='{"billed_amount": ["toFix_2","cast_float", "comma_number"],"records": ["toFix_2","cast_float", "comma_number"]}'
+																></canvas>
+															</div>
+														</div>
+													</div>
+
+												</div>
+												<!-- <div class="tab-pane fade active show" id="billing-service-cluster">
+													<div class="card-body px-4 py-4">
+														<h5 class="mb-3"><small class="text-primary">Total Billed Units By Service Clusters</small></h5>
+														<div class="chart-point">
+															<div class="check-point-area">
+																<canvas
+																	element-type="chart-pie"
+																	data-label='name'
+																	primary-key="b_amount"
+																	chart-title='Payments'
+																	primary-title="Collection"
+																	url="/get_table/select count(fcd.id) as records, sum(fcd.b_amount) as b_amount, sc.name from feeder_customer_details fcd left join feeder_feeder f on f.id=fcd.feeder_id left join service_cluster sc on sc.id = f.f_band where fcd.create_date >= '[current_year]' group by sc.name;"
+																	date-url="/get_table/select count(fcd.id) as records, sum(fcd.b_amount) as b_amount, sc.name from feeder_customer_details fcd left join feeder_feeder f on f.id=fcd.feeder_id left join service_cluster sc on sc.id = f.f_band where fcd.create_date between '[start_date]' and '[end_date]' group by sc.name;"
+																	crumb-id="bill-service-cluster-chart-crumb-cluster"
+																	element-group-name="pie-billed-chart-date"
+																></canvas>
+															</div>
+															<ul class="chart-point-list" id="bill-service-cluster-chart-crumb-cluster"></ul>
+														</div>
+													</div>
+												</div> -->
+												<div class="tab-pane fade" id="bill-tarrif">
+													<div class="card-body px-4 py-4">
+														<h5 class="mb-3"><small class="text-primary">Total Billed Units by Tariff</small></h5>
+														<div class="chart-point">
+															<div class="check-point-area  col-md-12" style="height: 300px;">
+																<canvas 
+																	class="display dataTable" 
+																	role="grid"
+																	style="width:100%"
+																	element-type="chart-bar"
+																	data-label='tariff_name'
+																	primary-key="total_amount"
+																	secondary-key="records"
+																	chart-title='Total Arrears'
+																	primary-title="Arrears"
+																	url="/get_table/select count(id) as records, tariff_name, sum(b_amount) as total_amount from feeder_customer_details where create_date >= '[current_year]' group by tariff_name"
+																	date-url="/get_table/select count(id) as records, tariff_name, sum(b_amount) as total_amount from feeder_customer_details where create_date between [start_date] and [end_date] group by tariff_name"
+																	element-group-name="pie-billed-chart-date"
+																	element-config='{"total_amount": ["toFix_2","cast_float", "comma_number"],"records": ["toFix_2","cast_float", "comma_number"]}'
+																	
+																>
+																	
+																</canvas>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="tab-pane fade" id="bill-bill-type">
+													<div class="card-body px-4 py-4">
+														<h5 class="mb-3"><small class="text-primary">Total Billed Units By Feeder</small></h5>
+														<div class="chart-point">
+															<div class="check-point-area  col-md-12" style="height: 300px;">
+																<canvas
+																		element-type="chart-bar"
+																		data-label='bill_description'
+																		primary-key="billed_amount"
+																		secondary-key="d.name"
+																		chart-title='Payments'
+																		primary-title="Collection"
+																		secondary-title="Feeder Name"
+																		url="/get_table/select sum(a.b_amount) as billed_amount, d.name as feeder from res_partner a left join feeder_feeder d on d.id = a.feeder_id  group by d.name;"
+																		date-url="/get_table/select count(fcd.id) as records, sum(fcd.b_amount) as b_amount, a.bill_description from feeder_customer_details fcd INNER JOIN account_payment a on a.partner_id = fcd.customer_ids where fcd.create_date between '[start_date]' and '[end_date]'  group by a.bill_description;"
+																		crumb-id="bill-bill-type-chart-crumb-cluster"
+																		element-group-name="pie-billed-chart-date"
+																		element-config='{"billed_amount": ["toFix_2","cast_float", "comma_number"]}'
+																></canvas>
+															</div>
+															<!-- <ul class="chart-point-list" id="bill-bill-type-chart-crumb-cluster"></ul> -->
+														</div>
+
+													</div>
+												</div>
+												<!-- <div class="tab-pane fade" id="bill-bill-type">
+													<div class="card-body px-4 py-4">
+														<h5 class="mb-3"><small class="text-primary">Total Billed Units By Transformer</small></h5>
+														<div class="chart-point">
+															<div class="check-point-area">
+																<canvas
+																		element-type="chart-pie"
+																		data-label='bill_description'
+																		primary-key="b_amount"
+																		chart-title='Payments'
+																		primary-title="Collection"
+																		url="/get_table/select count(fcd.id) as records, sum(fcd.b_amount) as b_amount, a.bill_description from feeder_customer_details fcd INNER JOIN account_payment a on a.partner_id = fcd.customer_ids where fcd.create_date >= '[current_year]' group by a.bill_description;"
+																		date-url="/get_table/select count(fcd.id) as records, sum(fcd.b_amount) as b_amount, a.bill_description from feeder_customer_details fcd INNER JOIN account_payment a on a.partner_id = fcd.customer_ids where fcd.create_date between '[start_date]' and '[end_date]'  group by a.bill_description;"
+																		crumb-id="bill-bill-type-chart-crumb-cluster"
+																		element-group-name="pie-billed-chart-date"
+																></canvas>
+															</div>
+															<ul class="chart-point-list" id="bill-bill-type-chart-crumb-cluster"></ul>
+														</div>
+													</div>
+												</div> -->
+												<!-- <div class="tab-pane fade" id="bill-bill-type">
+													<div class="card-body px-4 py-4">
+														<h5 class="mb-3"><small class="text-primary">Total Billed Units By Customer Class</small></h5>
+														<div class="chart-point">
+															<div class="check-point-area">
+																<canvas
+																		element-type="chart-pie"
+																		data-label='bill_description'
+																		primary-key="b_amount"
+																		chart-title='Payments'
+																		primary-title="Collection"
+																		url="/get_table/select count(fcd.id) as records, sum(fcd.b_amount) as b_amount, a.bill_description from feeder_customer_details fcd INNER JOIN account_payment a on a.partner_id = fcd.customer_ids where fcd.create_date >= '[current_year]' group by a.bill_description;"
+																		date-url="/get_table/select count(fcd.id) as records, sum(fcd.b_amount) as b_amount, a.bill_description from feeder_customer_details fcd INNER JOIN account_payment a on a.partner_id = fcd.customer_ids where fcd.create_date between '[start_date]' and '[end_date]'  group by a.bill_description;"
+																		crumb-id="bill-bill-type-chart-crumb-cluster"
+																		element-group-name="pie-billed-chart-date"
+																></canvas>
+															</div>
+															<ul class="chart-point-list" id="bill-bill-type-chart-crumb-cluster"></ul>
+														</div>
+													</div>
+												</div> -->
+												<!-- <div class="tab-pane fade" id="bill-bill-type">
+													<div class="card-body px-4 py-4">
+														<h5 class="mb-3"><small class="text-primary">Total Billed Units By Book</small></h5>
+														<div class="chart-point">
+															<div class="check-point-area">
+																<canvas
+																		element-type="chart-pie"
+																		data-label='bill_description'
+																		primary-key="b_amount"
+																		chart-title='Payments'
+																		primary-title="Collection"
+																		url="/get_table/select count(fcd.id) as records, sum(fcd.b_amount) as b_amount, a.bill_description from feeder_customer_details fcd INNER JOIN account_payment a on a.partner_id = fcd.customer_ids where fcd.create_date >= '[current_year]' group by a.bill_description;"
+																		date-url="/get_table/select count(fcd.id) as records, sum(fcd.b_amount) as b_amount, a.bill_description from feeder_customer_details fcd INNER JOIN account_payment a on a.partner_id = fcd.customer_ids where fcd.create_date between '[start_date]' and '[end_date]'  group by a.bill_description;"
+																		crumb-id="bill-bill-type-chart-crumb-cluster"
+																		element-group-name="pie-billed-chart-date"
+																></canvas>
+															</div>
+															<ul class="chart-point-list" id="bill-bill-type-chart-crumb-cluster"></ul>
+														</div>
+													</div>
+												</div> -->
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xl-12 col-xxl-12 col-lg-12 col-md-12">
+								<div class="card activity_overview">
+									<div class="card-header  border-0 pb-3 ">
+										<h4 class="card-title text-white">Arrears</h4>
+										<div class="col-xl-4 mb-3">
+											<div class="example">
+												<p class="mb-1">Date Range Pick</p>
+												<input class="form-control"
+													   type="text"
+													   name="daterange"
+													   value="01/01/2021 - 01/31/2021"
+													   element-type="chart-btn-date-range"
+													   element-name="arrears-chart-date"
+													   ids="[]"
+												/>
+											</div>
+										</div>
+									</div>
+									<div class="card-body pt-0">
+										<div class="custom-tab-1">
+											<ul class="nav nav-tabs mb-2">
+<!-- 												<li class="nav-item">
+													<a class="nav-link " data-toggle="tab" href="#arrears-by-category">Category</a>
+												</li> -->
+												<li class="nav-item">
+													<a class="nav-link active" data-toggle="tab" href="#arrears-district">District</a>
+												</li>
+												<!-- <li class="nav-item">
+													<a class="nav-link active" data-toggle="tab" href="#arrears-service-cluster">Service Cluster</a>
+												</li> -->
+												<li class="nav-item">
+													<a class="nav-link" data-toggle="tab" href="#arrears-tarrif">Tariff</a>
+												</li>
+
+											</ul>
+											<div class="tab-content">
+												<!-- <div class="tab-pane fade " id="arrears-by-category" role="tabpanel">
+													<div class="card-body px-4 py-4">
+														<h5 class="mb-3"><small class="text-primary">Total Arrears By Customer Category</small></h5>
+														<div class="chart-point">
+															<div class="check-point-area">
+																<canvas
+																		element-type="chart-pie"
+																		data-label='customer_category'
+																		primary-key="total_outstanding"
+																		chart-title='Payments'
+																		primary-title="Collection"
+																		url="/get_table/select count(id), sum(b_outstand) as total_outstanding, tariff_name from (select fcd.id as id, fcd.b_outstand, r.customer_category as customer_category, tr.name as tariff_name  from feeder_customer_details fcd INNER JOIN res_partner r on r.id = fcd.customer_ids left join tariff_rate tr on tr.id = r.new_category where fcd.create_date >= '[current_year]') no group by tariff_name;"
+																		date-url="/get_table/select count(id), sum(b_outstand) as total_outstanding, tariff_name from (select fcd.id as id, fcd.b_outstand, tr.name as tariff_name  from feeder_customer_details fcd INNER JOIN res_partner r on r.id = fcd.customer_ids left join tariff_rate tr on tr.id = r.new_category where fcd.create_date between '[start_date]' and '[end_date]') no group by tariff_name;
+"
+																		crumb-id="arrears-category-chart-crumb-category"
+																		element-group-name="arrears-chart-date"
+																></canvas>
+															</div>
+															<ul class="chart-point-list" id="arrears-category-chart-crumb-category"></ul>
+														</div>
+													</div>
+												</div> -->
+												<div class="tab-pane fade active show" id="arrears-district">
+													<div class="card-body  px-4 py-4">
+														<h5 class="mb-3"><small class="text-primary">Total Billed Units By District</small></h5>
+														<div class="chart-point">
+															<div class="check-point-area  col-md-12" style="height: 300px;">
+																<canvas
+																		element-type="chart-bar"
+																		data-label='district_name'
+																		primary-key="total_outstanding"
+																		secondary-key="records"
+																		chart-title='Payments'
+																		primary-title="Amount"
+																		secondary-title="Total Records"
+																		url="/get_table/select count(*) as records, sum(b_outstand) as total_outstanding, district_name from (select fcd.id, fcd.b_outstand, rd.name as district_name  from feeder_customer_details fcd INNER JOIN feeder_feeder f on f.id = fcd.feeder_id INNER JOIN res_district rd on rd.id=f.district_id where fcd.create_date >= '[current_year]') as no group by district_name"
+																		date-url="/get_table/select count(*) as records, sum(b_outstand) as total_outstanding, district_name from (select fcd.id, fcd.b_outstand, rd.name as district_name  from feeder_customer_details fcd INNER JOIN feeder_feeder f on f.id = fcd.feeder_id INNER JOIN res_district rd on rd.id=f.district_id where fcd.create_date between '[start_date]' and '[end_date]') as no group by district_name"
+																		element-group-name="arrears-chart-date"
+																		element-config='{"total_outstanding": ["toFix_2","cast_float", "comma_number"],"records": ["toFix_2","cast_float", "comma_number"]}'
+																></canvas>
+															</div>
+														</div>
+													</div>
+
+												</div>
+												<!-- <div class="tab-pane fade active show" id="arrears-service-cluster">
+													<div class="card-body px-4 py-4">
+														<h5 class="mb-3"><small class="text-primary">Total Arrears By Service Clusters</small></h5>
+														<div class="chart-point">
+															<div class="check-point-area">
+																<canvas
+																		element-type="chart-pie"
+																		data-label='service'
+																		primary-key="total_outstanding"
+																		chart-title='Payments'
+																		primary-title="Collection"
+																		url="/get_table/select count(id), sum(b_outstand) as total_outstanding, service from (select fcd.id as id, fcd.b_outstand, sc.name as service  from feeder_customer_details fcd INNER JOIN feeder_feeder f on f.id = fcd.feeder_id INNER JOIN service_cluster sc on sc.id = f.f_band where fcd.create_date >= '[current_year]') no group by service;"
+																		date-url="/get_table/select count(id), sum(b_outstand) as total_outstanding, service from (select fcd.id as id, fcd.b_outstand, sc.name as service  from feeder_customer_details fcd INNER JOIN feeder_feeder f on f.id = fcd.feeder_id INNER JOIN service_cluster sc on sc.id = f.f_band where fcd.create_date between '[start_date]' and '[end_date]') no group by service;"
+																		crumb-id="bill-category-chart-crumb-cluster"
+																		element-group-name="arrears-chart-date"
+																></canvas>
+															</div>
+															<ul class="chart-point-list" id="bill-category-chart-crumb-cluster"></ul>
+														</div>
+													</div>
+												</div> -->
+												<div class="tab-pane fade" id="arrears-tarrif">
+													<div class="card-body px-4 py-4">
+														<h5 class="mb-3"><small class="text-primary">Total Arrears by Tariff</small></h5>
+														<div class="chart-point">
+															<div class="check-point-area  col-md-12" style="height: 300px;">
+																<canvas 
+																	
+																	element-type="chart-bar"
+																	data-label='tariff_name'
+																	primary-key="total_outstanding"
+																	secondary-key="records"
+																	chart-title='Total Arrears'
+																	primary-title="Arrears"
+																	secondary-title="Records"
+																	url="/get_table/select count(id) as records, tariff_name, sum(b_outstand) as total_outstanding  from feeder_customer_details where create_date >= '[current_year]' group by tariff_name"
+																	date-url="/get_table/select count(id) as records, tariff_name, sum(b_outstand) as total_outstanding  from feeder_customer_details  where create_date between [start_date] and [end_date] group by tariff_name"
+																	element-group-name="arrears-chart-date"
+																	element-config='{"total_outstanding": ["toFix_2","cast_float", "comma_number"],"records": ["toFix_2","cast_float", "comma_number"]}'
+																	
+																>
+																	
+																</canvas>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+
+
+
+
+							<div class="col-xl-12 col-xxl-12 col-lg-12 col-md-12">
+								<div class="card activity_overview">
+									<div class="card-header  border-0 pb-3 ">
+										<h4 class="card-title text-white">Customers</h4>
+										<div class="col-xl-4 mb-3">
+											<div class="example">
+												<p class="mb-1">Date Range Pick</p>
+												<input class="form-control"
+													   type="text"
+													   name="daterange"
+													   value="01/01/2021 - 01/31/2021"
+													   element-type="chart-btn-date-range"
+													   element-name="customer-chart-date"
+													   ids="[]"
+												/>
+											</div>
+										</div>
+									</div>
+									<div class="card-body pt-0">
+										<div class="custom-tab-1">
+											<ul class="nav nav-tabs mb-2">
+												<!-- <li class="nav-item">
+													<a class="nav-link " data-toggle="tab" href="#customer-by-category">Category</a>
+												</li> -->
+												<li class="nav-item">
+													<a class="nav-link active" data-toggle="tab" href="#customer-district">District</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link " data-toggle="tab" href="#customer-feeder">Feeder</a>
+												</li>
+												<!-- <li class="nav-item">
+													<a class="nav-link active" data-toggle="tab" href="#customer-service-cluster">Service Cluster</a>
+												</li> -->
+												<li class="nav-item">
+													<a class="nav-link" data-toggle="tab" href="#customer-tarrif">Tariff</a>
+												</li>
+
+											</ul>
+											<div class="tab-content">
+												<!-- <div class="tab-pane fade " id="customer-by-category" role="tabpanel">
+													<div class="card-body px-4 py-4">
+														<h5 class="mb-3"><small class="text-primary">Total Customers By Category</small></h5>
+														<div class="chart-point">
+															<div class="check-point-area">
+																<canvas
+																		element-type="chart-pie"
+																		data-label='tariff_name'
+																		primary-key="count"
+																		chart-title='tariff_name'
+																		primary-title="Customer Category"
+																		url="/get_table/select count(id), tariff_name from (select fcd.id as id, r.customer_category as customer_category, tr.name as tariff_name  from feeder_customer_details fcd INNER JOIN res_partner r on r.id = fcd.customer_ids left join tariff_rate tr on tr.id = r.new_category where fcd.create_date >= '[current_year]') no group by tariff_name;"
+																		date-url="/get_table/select count(id), sum(b_outstand) as total_outstanding, tariff_name from (select fcd.id as id, fcd.b_outstand, tr.name as tariff_name  from feeder_customer_details fcd INNER JOIN res_partner r on r.id = fcd.customer_ids left join tariff_rate tr on tr.id = r.new_category where fcd.create_date between '[start_date]' and '[end_date]') no group by tariff_name;
+"
+																		crumb-id="customer-category-chart-crumb-category"
+																		element-group-name="customer-chart-date"
+																></canvas>
+															</div>
+															<ul class="chart-point-list" id="customer-category-chart-crumb-category"></ul>
+														</div>
+													</div>
+												</div> -->
+												<div class="tab-pane fade active show" id="customer-district">
+													<div class="card-body  px-4 py-4">
+														<h5 class="mb-3"><small class="text-primary">Total Customers By District</small></h5>
+														<div class="chart-point">
+															<div class="check-point-area  col-md-12" style="height: 300px;">
+																<canvas
+																		element-type="chart-bar"
+																		data-label='district_name'
+																		primary-key="records"
+																		secondary-key="district_name"
+																		chart-title='Total customers'
+																		primary-title="Total customers per district"
+																		url="/get_table/select count(*) as records,district_name from (select fcd.id,rd.name as district_name  from feeder_customer_details fcd INNER JOIN feeder_feeder f on f.id = fcd.feeder_id INNER JOIN res_district rd on rd.id=f.district_id where fcd.create_date >= '[current_year]') as no group by district_name"
+																		date-url="/get_table/select count(*) as records, sum(b_outstand) as total_outstanding, district_name from (select fcd.id, fcd.b_outstand, rd.name as district_name  from feeder_customer_details fcd INNER JOIN feeder_feeder f on f.id = fcd.feeder_id INNER JOIN res_district rd on rd.id=f.district_id where fcd.create_date between '[start_date]' and '[end_date]') as no group by district_name"
+																		element-group-name="customer-chart-date"
+																		element-config='{"records": ["toFix_2","cast_float", "comma_number"]}'
+																	>
+																	
+																</canvas>
+															</div>
+														</div>
+													</div>
+
+												</div>
+												<div class="tab-pane fade " id="customer-feeder">
+													<div class="card-body px-4 py-4">
+														<h5 class="mb-3"><small class="text-primary">Total Customers By Feeders</small></h5>				
+														<div class="chart-point">
+															<div class="check-point-area  col-md-12" style="height: 300px;">
+																<canvas 
+																	
+																	element-type="chart-bar"
+																	data-label='feeder'
+																	primary-key="total_customer"
+																	secondary-key="d.name"
+																	chart-title='Total Customers by Feeders'
+																	primary-title="Total customers per feeder"
+																	secondary-title="Feeder Name"
+																	url="/get_table/select count(a.id) as total_customer, d.name as feeder from res_partner a left join feeder_feeder d on d.id = a.feeder_id where a.create_date >= '[current_year]' group by d.name"
+																	date-url="/get_table/select count(a.id) as total_customer, d.name as feeder from res_partner a left join feeder_feeder d on d.id = a.feeder_id  group by d.name a.create_date between '[start_date]' and '[end_date]') no group by d.name;"
+																	element-group-name="customer-chart-date"
+																	element-config='{"total_customer": ["toFix_2","cast_float", "comma_number"]}'
+																	use-replace="true"
+																>
+																	
+																</canvas>
+															</div>
+														</div>
+													</div>
+												</div>
+<!-- 
+												<div class="tab-pane fade active show" id="arrears-service-cluster">
+													<div class="card-body px-4 py-4">
+														<h5 class="mb-3"><small class="text-primary">Total Arrears By Service Clusters</small></h5>
+														<div class="chart-point">
+															<div class="check-point-area">
+																<canvas
+																		element-type="chart-pie"
+																		data-label='service'
+																		primary-key="total_outstanding"
+																		chart-title='Payments'
+																		primary-title="Collection"
+																		url="/get_table/select count(id), sum(b_outstand) as total_outstanding, service from (select fcd.id as id, fcd.b_outstand, sc.name as service  from feeder_customer_details fcd INNER JOIN feeder_feeder f on f.id = fcd.feeder_id INNER JOIN service_cluster sc on sc.id = f.f_band) no group by service;"
+																		date-url="/get_table/select count(id), sum(b_outstand) as total_outstanding, service from (select fcd.id as id, fcd.b_outstand, sc.name as service  from feeder_customer_details fcd INNER JOIN feeder_feeder f on f.id = fcd.feeder_id INNER JOIN service_cluster sc on sc.id = f.f_band where fcd.create_date between '[start_date]' and '[end_date]') no group by service;"
+																		crumb-id="bill-category-chart-crumb-cluster"
+																		element-group-name="arrears-chart-date"
+																></canvas>
+															</div>
+															<ul class="chart-point-list" id="bill-category-chart-crumb-cluster"></ul>
+														</div>
+													</div>
+												</div> -->
+												<div class="tab-pane fade" id="customer-tarrif">
+													<div class="card-body px-4 py-4">
+														<h5 class="mb-3"><small class="text-primary">Total Customers by Tariff</small></h5>
+														<div class="chart-point">
+															<div class="check-point-area col-md-10" style="height: 300px;">
+																<canvas
+																		element-type="chart-bar"
+																		data-label='tariff_name'
+																		primary-key="total_outstanding"
+																		secondary-key="records"
+																		chart-title=''
+																		primary-title="Arrears"
+																		secondary-title="Total Customers"
+																		url="/get_table/select count(id) as records, tariff_name, sum(b_outstand) as total_outstanding  from feeder_customer_details where create_date >= '[current_year]' group by tariff_name"
+																		date-url="/get_table/select count(id) as records, tariff_name, sum(b_outstand) as total_outstanding  from feeder_customer_details  where create_date between [start_date] and [end_date] group by tariff_name
+"
+																		element-group-name="arrears-chart-date"
+																		element-config='{"total_outstanding": ["toFix_2","cast_float", "comma_number"],"records": ["toFix_2","cast_float", "comma_number"]}'
+																></canvas>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+
+
+
+
+
+						</div>
+					</div>
+
+
+
+
+					<!-- <div class="tab-pane fade active show" id="customer-feeder">
+													<div class="card-body px-4 py-4">
+														<h5 class="mb-3"><small class="text-primary">Total Customers By Feeders</small></h5>
+														
+														<div class="table-responsive">
+															<table 
+																class="display dataTable" 
+																role="grid"
+																style="width:100%"
+																element-type="chart-table"
+																data-label='feeder'
+																primary-key="total_customer"
+																chart-title='Total Customers by Feeders'
+																primary-title="Total customers per feeder"
+																url="/get_table/select count(a.id) as total_customer, d.name as feeder from res_partner a left join feeder_feeder d on d.id = a.feeder_id where a.create_date >= '[current_year]' group by d.name"
+																date-url="/get_table/select count(a.id) as total_customer, d.name as feeder from res_partner a left join feeder_feeder d on d.id = a.feeder_id  group by d.name a.create_date between '[start_date]' and '[end_date]') no group by d.name;"
+																element-group-name="customer-chart-date"
+																column-data= '["feeder", "total_customer"]'
+																render='
+																	<td>[feeder]</td>
+																	<td>[total_customer]</td>
+																'
+																element-config='{"total_customer": "comma_number"}'
+															>
+																<thead>
+																	<tr>
+																		<th 
+																		class="sorting_asc" tabindex="0" 
+																		rowspan="1" 
+																		colspan="1" style="width: 149.95px;" aria-sort="ascending" aria-label="Feeder: activate to sort column descending">
+																			Feeder
+																		</th>
+																		<th class="sorting_asc" tabindex="0" rowspan="1" colspan="1" style="width: 149.95px;" aria-sort="ascending" aria-label="Customers: activate to sort column descending">Customers</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td>Tiger Nixon</td>
+																		<td>System Architect</td>
+																	</tr>
+																	<tr>
+																		<td>Tiger Nixon</td>
+																		<td>System Architect</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div> -->
+
+
+
+
+
+
+
+
+
+					<!--<div class="col-xl-6 col-xxl-12 col-lg-12 col-md-12">-->
+						<!--<div id="user-activity" class="card">-->
+							<!--<div class="card-header border-0 pb-0 d-sm-flex d-block">-->
+								<!--<div>-->
+									<!--<h4 class="card-title">History 2013 - 2020</h4>-->
+									<!--<p class="mb-1">Lorem Ipsum is simply dummy text of the printing</p>-->
+								<!--</div>-->
+								<!--<div class="card-action">-->
+									<!--<ul class="nav nav-tabs" role="tablist">-->
+										<!--<li class="nav-item">-->
+											<!--<a class="nav-link active" data-toggle="tab" href="#user" role="tab">-->
+												<!--Day-->
+											<!--</a>-->
+										<!--</li>-->
+										<!--&lt;!&ndash; <li class="nav-item">-->
+											<!--<a class="nav-link" data-toggle="tab" href="#session" role="tab">-->
+												<!--Week-->
+											<!--</a>-->
+										<!--</li> &ndash;&gt;-->
+										<!--<li class="nav-item">-->
+											<!--<a class="nav-link" data-toggle="tab" href="#bounce" role="tab">-->
+												<!--Month-->
+											<!--</a>-->
+										<!--</li>-->
+										<!--<li class="nav-item">-->
+											<!--<a class="nav-link" data-toggle="tab" href="#session-duration" role="tab">-->
+												<!--Year-->
+											<!--</a>-->
+										<!--</li>-->
+									<!--</ul>-->
+								<!--</div>-->
+							<!--</div>-->
+							<!--<div class="card-body">-->
+								<!--<div class="tab-content" id="myTabContent">-->
+									<!--<div class="tab-pane fade show active" id="user" role="tabpanel">-->
+										<!--<canvas id="activity" class="chartjs"></canvas>-->
+									<!--</div>-->
+								<!--</div>-->
+							<!--</div>-->
+						<!--</div>-->
+					<!--</div>-->
+			   </div>
+            </div>
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright © Designed &amp; Developed by <a>Sterling Tech.</a> 2021</p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+
+		<!--**********************************
+           Support ticket button start
+        ***********************************-->
+
+        <!--**********************************
+           Support ticket button end
+        ***********************************-->
+
+
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+    <script src="vendor/global/global.min.js"></script>
+	<script src="vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="vendor/chart.js/Chart.bundle.min.js"></script>
+    <script src="js/custom.min.js"></script>
+	<!-- Apex Chart -->
+	<script src="vendor/apexchart/apexchart.js"></script>
+	
+    <!-- Vectormap -->
+	<!-- Chart piety plugin files -->
+    <script src="vendor/peity/jquery.peity.min.js"></script>
+	
+    <!-- Chartist -->
+    <script src="vendor/chartist/js/chartist.min.js"></script>
+	
+	<!-- Dashboard 1 -->
+	<script src="js/dashboard/dashboard-2.js"></script>
+	<!-- Svganimation scripts -->
+	<script src="vendor/svganimation/vivus.min.js"></script>
+    <script src="vendor/svganimation/svg.animation.js"></script>
+	
+</body>
+
+<!-- Mirrored from motaadmin.dexignlab.com/xhtml/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Jan 2021 02:50:12 GMT -->
+</html>
+
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js "></script>
+
+<script src="js/app/jquery.min.js"></script>
+<script src="js/app/jquery-1.11.1.min.js"></script>
+<script src="js/app/chartist.min.js"></script>
+<script src="js/app/charts.js"></script>
+<script src="js/app/jquery.dataTables.min.js"></script>
+<script src="js/app/moment.min.js"></script>
+<script src="js/app/request.js"></script>
+<script src="js/app/sessions.js"></script>
+<script src="js/app/strings.js"></script>
+<script src="js/app/globals.js"></script>
+<script src="js/app/jsUtil.js"></script>
+<script src="js/app/jsChartHelper.js"></script>
+<script src="js/app/jsHelper.js"></script>
+<script src="js/app/datatable.script.js"></script>
+
+<script src="vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- Daterangepicker -->
+<script src="js/plugins-init/bs-daterange-picker-init.js"></script>
+<script>
+</script>
+
+
+
+
+    
